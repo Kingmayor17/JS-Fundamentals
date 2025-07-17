@@ -1,7 +1,8 @@
-const arg = process.argv[2];
+const args = process.argv.slice(2); 
 
-if (arg) {
-  console.log(arg);
+if (args.length < 2) {
+  console.log("Usage: ./script_name.js <argument1> <argument2>");
 } else {
-  console.log('No argument');
-}
+  const arg1 = args[0];
+  const arg2 = args[1];
+  console.log(`${arg1} is ${arg2}`);
